@@ -13,7 +13,11 @@
 <body>
     <div class="emails">
         <ol class="list-email" v-if="listOk" >
-            <li v-for="email in emails">{{email}}</li>
+            <li v-for="email in emails">
+                <a :href="`mailto:${mail}`">
+                    {{email}}
+                </a>
+            </li>
         </ol>
         <h2 v-else>Loading...</h2>
     </div>
